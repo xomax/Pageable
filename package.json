@@ -4,7 +4,8 @@
   "description": "Create full page scrolling web pages. No jQuery.",
   "main": "dist/pageable.min.js",
   "scripts": {
-    "test": "./node_modules/.bin/karma start --single-run --reporters=progress"
+    "test": "./node_modules/.bin/karma start --single-run --reporters=progress",
+    "build": "./node_modules/.bin/minify ./src/pageable.js > ./dist/pageable.min.js"
   },
   "repository": {
     "type": "git",
@@ -25,6 +26,7 @@
     "karma-chrome-launcher": "^2.2.0",
     "karma-coverage": "^1.1.1",
     "karma-firefox-launcher": "^1.1.0",
-    "karma-jasmine": "^1.1.1"
+    "karma-jasmine": "^1.1.1",
+    "minify": "^11.0.1"
   }
 }
