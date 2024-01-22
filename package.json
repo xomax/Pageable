@@ -5,7 +5,7 @@
   "main": "dist/pageable.min.js",
   "scripts": {
     "test": "./node_modules/.bin/karma start --single-run --reporters=progress",
-    "build": "./node_modules/.bin/minify ./src/pageable.js > ./dist/pageable.min.js"
+    "build": "./node_modules/.bin/uglifyjs ./src/pageable.js -o ./dist/pageable.min.js --comments /@license/"
   },
   "repository": {
     "type": "git",
@@ -27,6 +27,6 @@
     "karma-coverage": "^1.1.1",
     "karma-firefox-launcher": "^1.1.0",
     "karma-jasmine": "^1.1.1",
-    "minify": "^11.0.1"
+    "uglify-js": "^3.17.4"
   }
 }
