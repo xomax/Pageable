@@ -37,6 +37,7 @@ if (!Element.prototype.closest) {
 }
 
 /*
+ @license
  Pageable
  Copyright (c) 2017 Karl Saunders (http://mobius.ovh)
  Dual licensed under the MIT (http://www.opensource.org/licenses/mit-license.php)
@@ -712,6 +713,18 @@ if (!Element.prototype.closest) {
                     case "PageDown":
                         e.preventDefault();
                         this.next();
+                        break;
+
+                    case 35:
+                    case "End":
+                        e.preventDefault();
+                        this.scrollToIndex(this.lastIndex);
+                        break;
+
+                    case 36:
+                    case "Home":
+                        e.preventDefault();
+                        this.scrollToIndex(0);
                         break;
                 }
             }
